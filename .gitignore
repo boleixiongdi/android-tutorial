@@ -1,3 +1,4 @@
 .DS_Store
 ./Material-BottomNavigation/build
-./Material-BottomNavigation/build/app/build
+./Material-BottomNavigation/app/build
+./Material-BottomNavigation/bottom-navigation/build
