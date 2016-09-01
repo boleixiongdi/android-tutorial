@@ -22,9 +22,14 @@ import it.sephiroth.android.library.bottomnavigation.MiscUtils;
 
 import static android.util.Log.INFO;
 
+/*
+* active 继承　OnMenuItemSelectionListener
+*/
+
 @TargetApi (Build.VERSION_CODES.KITKAT_WATCH)
 public class MainActivity extends BaseActivity implements BottomNavigation.OnMenuItemSelectionListener {
 
+    //得到类的名称　方便日志打印
     private static final String TAG = MainActivity.class.getSimpleName();
 
     public static final int MENU_TYPE_3_ITEMS = 0;
@@ -45,7 +50,15 @@ public class MainActivity extends BaseActivity implements BottomNavigation.OnMen
         setContentView(getActivityLayoutResId());
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        /*
+        *不同的打印方法在使用时都是某个方法带上(String tag, String msg)参数，
+        * tag表示的是打印信息的标签，msg表示的是需要打印的信息
+        * Log.v 的调试颜色为黑色的
+        * Log.d的输出颜色是蓝色的
+        * Log.i的输出为绿色
+        * Log.w的意思为橙色
+        * Log.e为红色
+         */
         MiscUtils.log(TAG, INFO, "screen density: %g", getResources().getDisplayMetrics().density);
 
         final int statusbarHeight = getStatusBarHeight();
